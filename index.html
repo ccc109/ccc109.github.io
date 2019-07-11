@@ -54,6 +54,14 @@
             align-items: center;
         }
 
+        #banner1{
+            background-image: url(img/banner1.jpg);
+            background-size: cover;
+        }
+        #banner2{
+            background-image: url(img/banner2.jpg);
+            background-size: cover;
+        }
         #header {
             height: 100vh;
         }
@@ -90,14 +98,20 @@
 
         .section.sec1 {
             height: 80vh;
+            display: flex;
         }
 
         .section.sec1 .secL {
-            width: calc(50% - 100px);
+            /* width: calc(50% - 100px);
             font-size: 20px;
             line-height: 50px;
             padding: 50px 50px;
-            float: left;
+            float: left; */
+            width: calc(50% - 100px);
+            align-self:center;
+            font-size: 20px;
+            line-height: 50px;
+            margin: 0 50px;
         }
 
         .section.sec1 .secR {
@@ -116,8 +130,7 @@
             position: relative;
         }
 
-        .section.sec2 .sec2L,
-        .sec2R {
+        .section.sec2 .sec2L, .sec2R {
             background-size: cover;
             background-position: center;
             width: calc(50% - 200px);
@@ -133,7 +146,8 @@
         }
 
         .sec2L .sec2_titleL {
-            margin-top: 400px;
+            margin-top: 60%;
+            
         }
 
         .section.sec2 .sec2R {
@@ -141,7 +155,7 @@
         }
 
         .sec2R .sec2_titleR {
-            margin-top: 400px;
+            margin-top:60%;
         }
 
 
@@ -181,9 +195,7 @@
             background-color: brown;
             height: 10vh;
         }
-        img{
-            width: 100%;
-        }
+        
     </style>
 </head>
 
@@ -191,10 +203,8 @@
     <div id="header">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/banner.jpg" alt="">
-                </div>
-                <div class="swiper-slide"></div>
+                <div class="swiper-slide" id="banner1"></div>
+                <div class="swiper-slide" id="banner2"></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
