@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <title>Document</title>
-    
+    <title>John Wick: Chapter 3 – Parabellum</title>
+
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        #header{
-            background-image: url(img/banner.jpg);
-            background-size: cover;
-            background-position: top;
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        #header {
             height: 100vh;
         }
+
         h1 {
             margin: 0;
             text-align: center;
             padding: 70px;
         }
-        .section{
+
+        .section {
             max-width: 1200px;
             margin: 0 auto;
         }
-        .section .navbar{
+
+        .section .navbar {
             background-color: grey;
             height: 100px;
             margin: 0;
             padding: 0;
         }
-        .section .navbar .navbar-btn{
+
+        .section .navbar .navbar-btn {
             width: 200px;
             height: 60px;
             border: 1px solid #000;
@@ -45,17 +87,20 @@
             line-height: 60px;
             font-size: 30px;
         }
+
         .section.sec1 {
             height: 80vh;
         }
-        .section.sec1 .secL{
+
+        .section.sec1 .secL {
             width: calc(50% - 100px);
             font-size: 20px;
             line-height: 50px;
             padding: 50px 50px;
             float: left;
         }
-        .section.sec1 .secR{
+
+        .section.sec1 .secR {
             background-image: url(img/01.jpg);
             background-size: cover;
             background-position: center;
@@ -63,13 +108,16 @@
             height: 100%;
             float: left;
         }
+
         .section.sec2 {
             height: 100vh;
             font-size: 20px;
             max-width: unset;
             position: relative;
         }
-        .section.sec2 .sec2L, .sec2R{
+
+        .section.sec2 .sec2L,
+        .sec2R {
             background-size: cover;
             background-position: center;
             width: calc(50% - 200px);
@@ -79,107 +127,157 @@
             padding: 50px 100px;
             color: white;
         }
-        .section.sec2 .sec2L{
+
+        .section.sec2 .sec2L {
             background-image: url(img/02.jpg);
         }
-        .sec2L .sec2_titleL{
+
+        .sec2L .sec2_titleL {
             margin-top: 400px;
         }
-        .section.sec2 .sec2R{
+
+        .section.sec2 .sec2R {
             background-image: url(img/03.jpg);
         }
-        .sec2R .sec2_titleR{
+
+        .sec2R .sec2_titleR {
             margin-top: 400px;
         }
 
 
         .section.sec3 {
-            background-color:lightblue;
+            background-color: lightblue;
             height: 80vh;
         }
-        .section.sec3 .sec3L, .sec3R{
+
+        .section.sec3 .sec3L,
+        .sec3R {
             float: left;
             width: 450px;
             line-height: 40px;
         }
-        .section.sec3 .sec3L{
+
+        .section.sec3 .sec3L {
             margin: 0 50px 0 100px;
         }
-        .section.sec3 .sec3R{
+
+        .section.sec3 .sec3R {
             margin: 0 100px 0 50px;
         }
 
 
         .section.sec4 {
-            background-color:lightgreen;
+            background-color: lightgreen;
             height: 70vh;
         }
-        .section.sec4 p{
+
+        .section.sec4 p {
             width: 600px;
             margin: 0 auto;
             line-height: 40px;
         }
 
-        .footer_p{
+        .footer_p {
             background-color: brown;
             height: 10vh;
         }
+        img{
+            width: 100%;
+        }
     </style>
 </head>
+
 <body>
-    <div id="header"></div>
+    <div id="header">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+                <div class="swiper-slide"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
     <div id="main">
         <div class="section">
             <ul class="navbar">
                 <li class="navbar-btn">
-                    <a href="">緣起</a>
+                    <a href="#sec1">緣起</a>
                 </li>
-                <li class="navbar-btn"></li>
-                <li class="navbar-btn"></li>
-                <li class="navbar-btn"></li>
+                <li class="navbar-btn">
+                    <a href="#sec2">感情</a>
+                </li>
+                <li class="navbar-btn">
+                    <a href="#sec3">組織</a>
+                </li>
+                <li class="navbar-btn">
+                    <a href="#sec4">預告</a>
+                </li>
             </ul>
         </div>
-        <div class="section sec1">
-                <div class="secL">
-                    <h3 class="sec1_title">緣起</h3>
-                    <p class="sec1_p">從首集開始，約翰維克愛上一個女人「海倫」，後來為了與她共度一生，決心離開殺手組織，只是後來愛妻病逝，留下了一隻米格魯「黛西」陪伴他，沒想到某天俄羅斯黑幫老大的兒子潛入他住宅偷車，並殺了黛西，逼得約翰維克要為小狗狗復仇。如果開玩笑說，《捍衛任務》一連串的復仇故事，就是因一隻狗狗的死而起。</p>
-                </div>
-                <div class="secR"></div>
+        <div class="section sec1" id="sec1">
+            <div class="secL">
+                <h3 class="sec1_title">緣起</h3>
+                <p class="sec1_p">
+                    從首集開始，約翰維克愛上一個女人「海倫」，後來為了與她共度一生，決心離開殺手組織，只是後來愛妻病逝，留下了一隻米格魯「黛西」陪伴他，沒想到某天俄羅斯黑幫老大的兒子潛入他住宅偷車，並殺了黛西，逼得約翰維克要為小狗狗復仇。如果開玩笑說，《捍衛任務》一連串的復仇故事，就是因一隻狗狗的死而起。
+                </p>
+            </div>
+            <div class="secR"></div>
         </div>
 
-        <div class="section sec2">
+        <div class="section sec2" id="sec2">
 
-                <div class="sec2L">
-                    <h3 class="sec2_titleL">我想要活著，是為了留住妻子的記憶</h3>
-                    <p class="sec2_pL">當殺手組織的高層董事問他：「把事情鬧這麼大，就為了一隻小狗？」，約翰維克回答：「牠不只是一隻狗，牠是我的一切！」因為這隻狗代表著妻子留下的情感相伴，這個情感是無法取代的。</p>
-                </div>
-                
-                <div class="sec2R">
-                    <h3 class="sec2_titleR">牠不只是一隻狗，牠是我的一切！</h3>
-                    <p class="sec2_pR">這句話也回應著從第一集開始，約翰維克為了愛，決心隱退江湖，而妻子海倫是他一輩子無法忘記的人。</p>
-                </div>
-                
+            <div class="sec2L">
+                <h3 class="sec2_titleL">我想要活著，是為了留住妻子的記憶</h3>
+                <p class="sec2_pL">當殺手組織的高層董事問他：「把事情鬧這麼大，就為了一隻小狗？」，約翰維克回答：「牠不只是一隻狗，牠是我的一切！」因為這隻狗代表著妻子留下的情感相伴，這個情感是無法取代的。
+                </p>
+            </div>
+
+            <div class="sec2R">
+                <h3 class="sec2_titleR">牠不只是一隻狗，牠是我的一切！</h3>
+                <p class="sec2_pR">這句話也回應著從第一集開始，約翰維克為了愛，決心隱退江湖，而妻子海倫是他一輩子無法忘記的人。</p>
+            </div>
+
         </div>
-        <div class="section sec3">
-            <h1 class = title>大陸飯店</h1>
+        <div class="section sec3" id="sec3">
+            <h1 class=title>大陸飯店</h1>
             <div class="sec3L">
                 <h3 class="sec3_titleL">資源與服務</h3>
-                <p class="sec3_pL">職業殺手的生活當是危險的，不過這地下世界裡有許多的資源四散各地，能夠為殺手提供服務。例如，一個看起來很普通的診所可以在深夜為殺手緊急縫合傷口。你也可以找某個歷史學家拿一份標示了秘道的地圖，好潛入一個看起來不可能被滲透的堡壘。就連計程車司機可能都可以為你提供服務。</p>
+                <p class="sec3_pL">
+                    職業殺手的生活當是危險的，不過這地下世界裡有許多的資源四散各地，能夠為殺手提供服務。例如，一個看起來很普通的診所可以在深夜為殺手緊急縫合傷口。你也可以找某個歷史學家拿一份標示了秘道的地圖，好潛入一個看起來不可能被滲透的堡壘。就連計程車司機可能都可以為你提供服務。
+                </p>
             </div>
             <div class="sec3R">
                 <h3 class="sec3_titleR">高桌會</h3>
-                <p class="sec3_pR">這一大堆的規則一定都是從某處定下的，而在這個地下世界裡，高桌會則有著絕對的權威。關於這個組織的一切我們並不清楚，但他們是一群犯罪之王，群聚在一起組織了某種議會，並且監看著殺手世界裡的一切事件。他們設下了許多的規則，而當有人違背了規則，高桌會則會派遣一名「審判者」前往進行懲罰。</p>
+                <p class="sec3_pR">
+                    這一大堆的規則一定都是從某處定下的，而在這個地下世界裡，高桌會則有著絕對的權威。關於這個組織的一切我們並不清楚，但他們是一群犯罪之王，群聚在一起組織了某種議會，並且監看著殺手世界裡的一切事件。他們設下了許多的規則，而當有人違背了規則，高桌會則會派遣一名「審判者」前往進行懲罰。
+                </p>
             </div>
         </div>
-        <div class="section sec4">
+        <div class="section sec4" id="sec4">
             <h1>劇情簡介</h1>
-            <p class="content6">好萊塢最性感大叔基努李維飾演「地表最強殺神系列」電影續集《捍衛任務3：全面開戰》睽違兩年，再度強勢回歸，劇情接續《捍衛任務2：殺神回歸》片尾，「殺神」約翰維克因觸犯大陸酒店中「內部不可殺人」的規定，在孤立無援的情況下，遭殺手高層組織下達1400萬美金的全球通緝令，約翰維克必須設法在僅存的一個小時中逃出紐約，躲避來自各路殺手的瘋狂追殺。</p>
+            <p class="content6">
+                好萊塢最性感大叔基努李維飾演「地表最強殺神系列」電影續集《捍衛任務3：全面開戰》睽違兩年，再度強勢回歸，劇情接續《捍衛任務2：殺神回歸》片尾，「殺神」約翰維克因觸犯大陸酒店中「內部不可殺人」的規定，在孤立無援的情況下，遭殺手高層組織下達1400萬美金的全球通緝令，約翰維克必須設法在僅存的一個小時中逃出紐約，躲避來自各路殺手的瘋狂追殺。
+            </p>
         </div>
     </div>
     <footer class="footer_p"></footer>
 
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+        });
+    </script>
 </body>
+
 </html>
