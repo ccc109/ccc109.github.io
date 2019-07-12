@@ -14,20 +14,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-
         .swiper-container {
             width: 100%;
             height: 100%;
@@ -52,23 +38,28 @@
             align-items: center;
         }
 
-        #banner1{
+        #banner1 {
             background-image: url(img/banner1.jpg);
             background-size: cover;
         }
-        #banner2{
+
+        #banner2 {
             background-image: url(img/banner2.jpg);
             background-size: cover;
         }
+
         #header {
             height: 100vh;
         }
-
+        #main{
+            background-color: grey;
+        }
         h1 {
             margin: 0;
             text-align: center;
             padding: 70px;
         }
+
         .section {
             max-width: 1200px;
             margin: 0 auto;
@@ -82,12 +73,12 @@
         }
 
         .section .navbar .navbar-btn {
-            width: 200px;
+            width: 100px;
             height: 60px;
             border: 1px solid #000;
             list-style-type: none;
             float: left;
-            margin: 20px 0 0 80px;
+            margin: 20px 0 0 160px;
             text-align: center;
             line-height: 60px;
             font-size: 30px;
@@ -100,14 +91,9 @@
         }
 
         .section.sec1 .secL {
-            /* width: calc(50% - 100px);
-            font-size: 20px;
-            line-height: 50px;
-            padding: 50px 50px;
-            float: left; */
             width: calc(50% - 100px);
-            align-self:center;
-            font-size: 20px;
+            align-self: center;
+            font-size: 18px;
             line-height: 50px;
             margin: 0 50px;
         }
@@ -128,7 +114,8 @@
             position: relative;
         }
 
-        .section.sec2 .sec2L, .sec2R {
+        .section.sec2 .sec2L,
+        .sec2R {
             background-size: cover;
             background-position: center;
             width: calc(50% - 200px);
@@ -145,7 +132,7 @@
 
         .sec2L .sec2_titleL {
             margin-top: 60%;
-            
+
         }
 
         .section.sec2 .sec2R {
@@ -153,7 +140,7 @@
         }
 
         .sec2R .sec2_titleR {
-            margin-top:60%;
+            margin-top: 60%;
         }
 
 
@@ -180,13 +167,27 @@
 
         .section.sec4 {
             background-color: lightgreen;
-            height: 70vh;
+            height: 80vh;
+            position: relative;
         }
 
         .section.sec4 p {
             width: 600px;
             margin: 0 auto;
             line-height: 40px;
+        }
+
+        .video-container {
+            overflow: hidden;
+        }
+
+        .video-container iframe, .video-container object, .video-container embed {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 50%;
+            height: 40%;
         }
 
         .footer_p {
@@ -197,7 +198,6 @@
             font-size: 18px;
             font-weight: bold;
         }
-        
     </style>
 </head>
 
@@ -254,7 +254,7 @@
 
         </div>
         <div class="section sec3" id="sec3">
-            <h1 class=title>大陸飯店</h1>
+            <h1 class=title>大陸酒店</h1>
             <div class="sec3L">
                 <h3 class="sec3_titleL">資源與服務</h3>
                 <p class="sec3_pL">
@@ -273,6 +273,11 @@
             <p class="content6">
                 好萊塢最性感大叔基努李維飾演「地表最強殺神系列」電影續集《捍衛任務3：全面開戰》睽違兩年，再度強勢回歸，劇情接續《捍衛任務2：殺神回歸》片尾，「殺神」約翰維克因觸犯大陸酒店中「內部不可殺人」的規定，在孤立無援的情況下，遭殺手高層組織下達1400萬美金的全球通緝令，約翰維克必須設法在僅存的一個小時中逃出紐約，躲避來自各路殺手的瘋狂追殺。
             </p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/unLr3sQIQGc" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
         </div>
     </div>
     <footer class="footer_p">版權所有</footer>

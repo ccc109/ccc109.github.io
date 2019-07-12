@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    h1{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+
+    <h1 class="title" id="title">Hello</h1>
+    <button onclick="btn_click()">改變文字</button>
+    
+    
+    <script>
+    
+    function btn_click(){
+        var my_title = document.querySelector("#title");
+        // 抓取h1文字，給予my_title這個變數
+        var now_title = my_title.textContent;
+        // 宣告now_title變數，指定h1現在的文字 
+
+        // 判斷 如果h1現在文字為"Hello"就改為"Hello World"，否則改為"Hello"
+        if(now_title == "Hello"){
+            my_title.textContent = "Hello World";
+        }else{
+            my_title.textContent = "Hello";
+        }
+
+    }
+        
+    </script>
+</body>
+</html>

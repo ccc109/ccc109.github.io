@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+        #img_group{
+            width: 600px;
+        }
+        .section_top{
+            width: 100%;
+        }
+        .section_top img{
+            width: 100%;
+        }
+        .section_btm{
+            width: 100%;
+            display: flex;
+        }
+        .section_btm .img_block{
+            width: 25%;
+            padding: 5px;
+        }
+        .section_btm .img_block img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="img_group">
+        <div class="section_top" >
+            <img src="https://boygeniusreport.files.wordpress.com/2017/01/cat.jpg?quality=98&strip=all&w=782" alt="">
+        </div>
+
+        <div class="section_btm">
+            <div class="img_block" id="img_A">
+                <img src="https://boygeniusreport.files.wordpress.com/2017/01/cat.jpg?quality=98&strip=all&w=782" alt="">
+            </div>
+            <div class="img_block" id="img_B">
+                <img src="https://pixel.nymag.com/imgs/daily/vulture/2019/03/13/13-captain-marvel-flerken-cat.w700.h700.jpg" alt="">
+            </div>
+            <div class="img_block" id="img_C">
+                <img src="https://cdn.thewirecutter.com/wp-content/uploads/2018/06/cataccessories-lowres-2x1-05916.jpg" alt="">
+            </div>
+            <div class="img_block" id="img_D">
+                <img src="https://townsquare.media/site/678/files/2019/03/GettyImages-701203550.jpg?w=980&q=75" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var img_A = document.querySelector("#img_A");
+        var img_B = document.querySelector("#img_B");
+        var img_C = document.querySelector("#img_C");
+        var img_D = document.querySelector("#img_D");
+        var top_img = document.querySelector(".section_top img");
+        
+        
+        img_A.onclick = function(){
+            top_img.src = "https://boygeniusreport.files.wordpress.com/2017/01/cat.jpg?quality=98&strip=all&w=782" ;
+                       
+        }
+        img_B.onclick = function(){
+            top_img.src = "https://pixel.nymag.com/imgs/daily/vulture/2019/03/13/13-captain-marvel-flerken-cat.w700.h700.jpg" ;
+
+        }
+        img_C.onclick = function(){        
+            top_img.src ="https://cdn.thewirecutter.com/wp-content/uploads/2018/06/cataccessories-lowres-2x1-05916.jpg";
+
+        }
+        img_D.onclick = function(){
+            top_img.src ="https://townsquare.media/site/678/files/2019/03/GettyImages-701203550.jpg?w=980&q=75";
+
+        }
+    </script>
+</body>
+</html>
