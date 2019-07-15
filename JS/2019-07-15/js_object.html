@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .card {
+            max-width: 600px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <!-- <div class="top_section">
+            <img id="top_section_img" src="" alt="">
+        </div>
+        <div class="bottom_section">
+            <h1 class="title"></h1>
+            <p class="content"></p>
+        </div> -->
+    </div>
+
+    <script>
+        var tea = {
+            image: "https://www.chingshin.tw/includes/timthumb.php?src=upload/product/1703091701310000001.png&w=280&h=350&zc=2",
+            teaName: "烏龍奶茶",
+            sugar: "半糖",
+            ice: "去冰",
+            price: 40,
+            capacity: 10
+        }
+        
+        // var top_section_img=document.querySelector("#top_section_img");
+        // var title=document.querySelector(".title");
+        // var content=document.querySelector(".content");
+
+        // top_section_img.src = tea.image;
+        // title.innerHTML = '<div style ="color:red">' + tea.teaName + '</div>';
+        // content.innerHTML = "我喝的糖度:" + tea.sugar + "冰塊:" + tea.ice;
+
+        var card = document.querySelector(".card");
+        // 樣版字符串
+        card.innerHTML = `
+            <div class="top_section">
+                <img id="top_section_img" src="${tea.image}" alt="">
+            </div>
+            <div class="bottom_section">
+                <h1 class="title" style="color:red">${tea.teaName}</h1>
+                <p class="content">我喝的糖度:${tea.sugar}<br>冰塊:${tea.ice}<br>價格:${tea.price}</p>
+            </div>
+        
+        `;
+
+    </script>
+
+</body>
+
+</html>
