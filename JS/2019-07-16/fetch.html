@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .card {
+            border: 1px solid #000;
+            width: 300px;
+            height: 500px;
+            border-radius: 10px;
+            margin: 0 auto;
+            background-color: bisque;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .top {
+            width: 100%;
+            height: 150px;
+        }
+        .top img{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .bottom {
+            width: 100%;
+            height: 350px;
+        }
+
+
+        @keyframes sun{
+            0%{
+                
+            }
+            33%{
+                
+            }
+            66%{
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="location_select">
+        <!-- <option value=""></option> -->
+    </select>
+
+    <div class="card">
+        <div class="top">
+            <img src="" alt="">
+        </div>
+        <div class="bottom">
+            <h1>縣市</h1>
+            <h1>溫度</h1>
+            <h2>濕度</h2>
+            <h2>紫外線</h2>
+            <h2>降雨機率</h2>
+        </div>
+    </div>
+
+    <script>
+        var locations = [];
+
+        fetch('https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-D0047-091?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D&format=JSON')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                // console.log(myJson);
+
+                locations = myJson.cwbopendata.dataset.locations.location;
+                var temp = locations[5].weatherElement[0].time[0].elementValue.value;
+                var RH = locations[5].weatherElement[2].time[0].elementValue.value;
+                var rain = locations[5].weatherElement[9].time[0].elementValue.value;
+                var uvi = locations[5].weatherElement[13].time[0].elementValue[0].value;
+                // console.log(locations[5]);
+                var city =locations[5].locationName;
+
+                var card = document.querySelector(".card");
+                card.innerHTML = `
+                    <div class="top">
+                        <img src="https://stickershop.line-scdn.net/stickershop/v1/product/1350326/LINEStorePC/main.png;compress=true" alt="">
+                        
+                    </div>
+                    <div class="bottom">
+                            <h1>縣市:${city}</h1>
+                        <h1>溫度:${temp}度</h1><br>
+                        <h2>濕度:${RH}%</h2>
+                        <h2>紫外線指數:${uvi}</h2>
+                        <h2>降雨機率:${rain}%</h2>
+                    </div>
+                `;
+
+                var location_select = document.querySelector("#location_select");
+                    // console.log(location_select);
+                    
+                for (let index = 0; index < locations.length; index++) {
+                    const select = locations[index];
+                    // console.log(select);
+                    location_select.innerHTML +=`<option value="${select.locationName}">${select.locationName}</option>`;
+                    
+                }
+                    
+            
+            });
+    </script>
+
+</body>
+
+</html>

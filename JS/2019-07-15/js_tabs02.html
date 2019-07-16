@@ -34,6 +34,7 @@
         }
 
         .btm_section .tab_content {
+            background-color: lightblue;
             width: 100%;
             height: 500px;
             border: 1px solid #000;
@@ -45,6 +46,9 @@
             background-color: lightblue;
         }
 
+        .color2{
+            background-color: lightgrey;
+        }
         .show {
             display: block;
         }
@@ -59,17 +63,17 @@
 <body>
     <div id="all">
         <div class="top_section">
-            <div class="tab" >tab1</div>
-            <div class="tab" >tab2</div>
-            <div class="tab" >tab3</div>
-            <div class="tab" >tab4</div>
+            <div class="tab color" >tab1</div>
+            <div class="tab color2"  >tab2</div>
+            <div class="tab color2" >tab3</div>
+            <div class="tab color2" >tab4</div>
         </div>
 
         <div class="btm_section">
-            <div class="tab_content show" >tab1_content 56654654</div>
-            <div class="tab_content hidden" >tab2_content 65165416541212120016</div>
-            <div class="tab_content hidden" >tab3_content 321351513121</div>
-            <div class="tab_content hidden" >tab4_content 321351513121</div>
+            <div class="tab_content show" ><h1>tab1_content</h1> 56654654</div>
+            <div class="tab_content hidden" ><h1>tab2_content</h1> 65165416541212120016</div>
+            <div class="tab_content hidden" ><h1>tab3_content</h1> 321351513121</div>
+            <div class="tab_content hidden" ><h1>tab4_content</h1> 321351513121</div>
         </div>
     </div>
 
@@ -88,9 +92,9 @@
 
                 tab_content.classList.add("show");
                 tab_content.classList.remove("hidden");
-                
+
+                tab_btn.classList.remove("color2");
                 tab_btn.classList.add("color");
-                tab_content.classList.add("color");
             }
 
         }
@@ -114,7 +118,7 @@
                 content_hidden.classList.add("hidden");
                 
                 tab_hidden.classList.remove("color");
-                content_hidden.classList.remove("color");
+                tab_hidden.classList.add("color2");
 
             }
         }
