@@ -26,6 +26,7 @@
         }
 
         .top_section .tab {
+            background-color: lightgrey;
             width: 20%;
             margin-right: 10px;
             border: 1px solid #000;
@@ -42,13 +43,10 @@
             border-radius: 5px;
         }
 
-        .color{
+        .tab.color{
             background-color: lightblue;
         }
 
-        .color2{
-            background-color: lightgrey;
-        }
         .show {
             display: block;
         }
@@ -93,7 +91,6 @@
                 tab_content.classList.add("show");
                 tab_content.classList.remove("hidden");
 
-                tab_btn.classList.remove("color2");
                 tab_btn.classList.add("color");
             }
 
@@ -118,8 +115,6 @@
                 content_hidden.classList.add("hidden");
                 
                 tab_hidden.classList.remove("color");
-                tab_hidden.classList.add("color2");
-
             }
         }
 
