@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <title>John Wick: Chapter 3 – Parabellum</title>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -48,7 +50,7 @@
         }
 
         #header {
-            height: 100vh;
+            height: 90vh;
         }
 
         #main {
@@ -237,13 +239,13 @@
         <div class="section">
             <ul class="navbar">
                 <li class="navbar-btn">
-                    <a href="#sec1" style="text-decoration:none">緣起</a>
+                    <a href="#sec1">故事</a>
                 </li>
                 <li class="navbar-btn">
                     <a href="#sec2" style="text-decoration:none">感情</a>
                 </li>
                 <li class="navbar-btn">
-                    <a href="#sec3" style="text-decoration:none">組織</a>
+                    <a href="#sec3" >組織</a>
                 </li>
                 <li class="navbar-btn">
                     <a href="#sec4" style="text-decoration:none">預告</a>
@@ -257,18 +259,18 @@
                     從首集開始，約翰維克愛上一個女人「海倫」，後來為了與她共度一生，決心離開殺手組織，只是後來愛妻病逝，留下了一隻米格魯「黛西」陪伴他，沒想到某天俄羅斯黑幫老大的兒子潛入他住宅偷車，並殺了黛西，逼得約翰維克要為小狗狗復仇。如果開玩笑說，《捍衛任務》一連串的復仇故事，就是因一隻狗狗的死而起。
                 </p>
             </div>
-            <div class="secR"></div>
+            <div class="secR" data-aos="zoom-in-right" data-aos-duration="2000"></div>
         </div>
 
         <div class="section sec2" id="sec2">
 
-            <div class="sec2L">
+            <div class="sec2L" data-aos="fade-right" data-aos-duration="2000">
                 <h3 class="sec2_titleL">我想要活著，是為了留住妻子的記憶</h3>
                 <p class="sec2_pL">當殺手組織的高層董事問他：「把事情鬧這麼大，就為了一隻小狗？」，約翰維克回答：「牠不只是一隻狗，牠是我的一切！」因為這隻狗代表著妻子留下的情感相伴，這個情感是無法取代的。
                 </p>
             </div>
 
-            <div class="sec2R">
+            <div class="sec2R" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400">
                 <h3 class="sec2_titleR">牠不只是一隻狗，牠是我的一切！</h3>
                 <p class="sec2_pR">這句話也回應著從第一集開始，約翰維克為了愛，決心隱退江湖，而妻子海倫是他一輩子無法忘記的人。</p>
             </div>
@@ -305,10 +307,15 @@
 
     <div class="back_to_top">回到最上</div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+        // AOS初始化
+        AOS.init();
+
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             spaceBetween: 30,
