@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 99;
+            width: 250px;
+            height: 100%;
+            margin: 0 -250px 0 0;
+            -moz-transition: all 200ms ease-in;
+            -webkit-transition: all 200ms ease-in;
+            -o-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+        }
+
+        nav ul {
+            width: 250px;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            background: #222;
+            overflow: hidden;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 1em;
+            font-family: 'helvetica neue', helvetica, arial, sans-serif;
+            text-decoration: none;
+            display: block;
+            padding: 16px 16px;
+            font-weight: 300;
+            letter-spacing: 0px;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a:hover {
+            background: #111;
+        }
+
+        label {
+            display: block;
+            background-color: none;
+            width: 80px;
+            height: 71px;
+            line-height: 42px;
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            line-height: 1.1em;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            -moz-transition: all 200ms ease-in;
+            -webkit-transition: all 200ms ease-in;
+            -o-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+            z-index: 500;
+            cursor: pointer;
+        }
+
+        label img {
+            width: 100%;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked~nav {
+            margin: 0;
+        }
+
+        input[type="checkbox"]:checked~label {
+            right: 260px;
+        }
+
+        input[type="checkbox"]:checked~section {
+            -webkit-transform: translate3d(260px, 0, 0);
+            -moz-transform: translate3d(260px, 0, 0);
+            -o-transform: translate3d(260px, 0, 0);
+            transform: translate3d(260px, 0, 0);
+        }
+
+        /*Video CSS*/
+
+        .video-background {
+            background: #000;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -99;
+        }
+
+        .video-foreground,
+        .video-background iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        #vidtop-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            color: #fff;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .vid-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-family: Avenir, Helvetica, sans-serif;
+            /*768px for standard browser height*/
+            text-align: center;
+        }
+
+        .vid-info h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 0;
+            line-height: 1.2;
+        }
+
+        .vid-info p {
+            line-height: 24px;
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            .video-foreground {
+                height: 300%;
+                top: -100%;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            .video-foreground {
+                width: 300%;
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="navigation" />
+    <label for="navigation">
+        <img src="http://msprodimages.com/DashboardImages/white_menu_icon.png">
+    </label>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="#">How It Works</a>
+            </li>
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">Register</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="home">
+        <div class="video-background">
+            <div class="video-foreground">
+                    <div id="ytplayer"></div>
+            </div>
+            <div id="vidtop-content">
+                <div class="vid-info">
+                    <h1>Full Page Youtube Video Background & Side Menu Pure CSS</h1>
+                    <p>Open full view page to see how it works.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        var tag = document.createElement("script");
+
+        tag.src = "//www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var videoId = 'XkD0bkks8aw';
+        var startSeconds = 28;
+        var endSeconds = 35;
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player("ytplayer", {
+                videoId: videoId,
+                playerVars: {
+                    autoplay: 1, // Auto-play the video on load
+                    controls: 0, // Show pause/play buttons in player
+                    showinfo: 0, // Hide the video title
+                    modestbranding: 1, // Hide the Youtube Logo
+                    fs: 1, // Hide the full screen button
+                    cc_load_policy: 0, // Hide closed captions
+                    iv_load_policy: 3, // Hide the Video Annotations
+                    start: startSeconds,
+                    end: endSeconds,
+                    autohide: 0, // Hide video controls when playing
+                },
+                events: {
+                    onReady: onPlayerReady,
+                    onStateChange: onStateChange
+                }
+            });
+        }
+
+        function onPlayerReady() {
+            player.playVideo();
+            // Mute Sound Function!
+            player.mute();
+        }
+
+        function onStateChange(event) {
+            
+            
+            if (event.data === YT.PlayerState.ENDED) {
+                
+                
+                player.loadVideoById({
+                    videoId: videoId,
+                    startSeconds: startSeconds,
+                    endSeconds: endSeconds
+                });
+                // player.playVideo();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
