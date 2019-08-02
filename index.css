@@ -1,0 +1,62 @@
+.navbar {
+  height: 100px;
+}
+
+#banner {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: lightgray;
+}
+
+#origin .about,
+#origin .row {
+  margin: 0;
+}
+
+#origin .about .img,
+#origin .row .img {
+  width: 100%;
+  height: 50vh;
+  background-color: gray;
+}
+
+#origin .about .text,
+#origin .row .text {
+  width: 100%;
+  height: 50vh;
+  background-color: lightcoral;
+}
+
+#origin .about .block,
+#origin .row .block {
+  width: 100%;
+  height: 50vh;
+  background-color: bisque;
+  padding: 50px;
+}
+
+#origin .about .block .text,
+#origin .row .block .text {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #f8caca;
+}
+
+#idea .Strategy, #idea .row {
+  margin: 0;
+}
+
+#idea .Strategy .text, #idea .row .text {
+  width: 100%;
+  height: 40vh;
+  background-color: lightsalmon;
+  margin-bottom: 20px;
+}
+
+#idea .Strategy .img, #idea .row .img {
+  width: 100%;
+  height: 40vh;
+  background-color: gray;
+}
+/*# sourceMappingURL=index.css.map */
