@@ -8,55 +8,99 @@
   background-color: lightgray;
 }
 
-#origin .about,
-#origin .row {
+#origin .about {
   margin: 0;
 }
 
-#origin .about .img,
-#origin .row .img {
+#origin .about .img {
   width: 100%;
   height: 50vh;
   background-color: gray;
+  position: relative;
 }
 
-#origin .about .text,
-#origin .row .text {
+#origin .about .img h3 {
+  position: absolute;
+  left: calc(50% - 84px);
+  bottom: 10%;
+}
+
+#origin .about .img h3:nth-child(1) {
+  left: calc(50% - 112px);
+}
+
+#origin .about .text {
   width: 100%;
   height: 50vh;
   background-color: lightcoral;
 }
 
-#origin .about .block,
-#origin .row .block {
+#origin .about .text h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#origin .about .text p {
+  margin: 20px 50px;
+}
+
+#origin .about .text p:nth-child(0) {
+  margin-top: 30%;
+}
+
+#origin .about .block {
+  margin: 0;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   background-color: bisque;
   padding: 50px;
 }
 
-#origin .about .block .text,
-#origin .row .block .text {
+#origin .about .block .text {
   margin: 0 auto;
   width: 100%;
   height: 100%;
   background-color: #f8caca;
 }
 
-#idea .Strategy, #idea .row {
+#origin .about .hide {
+  display: none;
+}
+
+#idea .Strategy {
   margin: 0;
 }
 
-#idea .Strategy .text, #idea .row .text {
+#idea .Strategy .text {
   width: 100%;
   height: 40vh;
   background-color: lightsalmon;
-  margin-bottom: 20px;
 }
 
-#idea .Strategy .img, #idea .row .img {
+#idea .Strategy .img {
   width: 100%;
   height: 40vh;
   background-color: gray;
+}
+
+#price .menu {
+  margin: 0;
+}
+
+#price .menu .button {
+  text-align: center;
+  border: 1px solid #000;
+}
+
+#price .menu .img {
+  width: 100%;
+  height: 60vh;
+  background-color: burlywood;
+}
+
+#store .store .map {
+  width: 100%;
+  height: 60vh;
+  background-color: lightgreen;
 }
 /*# sourceMappingURL=index.css.map */
