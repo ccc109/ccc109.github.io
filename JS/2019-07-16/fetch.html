@@ -109,6 +109,8 @@
                 var location_select = document.querySelector("#location_select");
                     // console.log(location_select);
                     
+
+                // 把數值塞入選單
                 for (let index = 0; index < locations.length; index++) {
                     const select = locations[index];
                     // console.log(select);
@@ -116,7 +118,12 @@
                     
                 }
                     
-            
+                // onchange 偵測選單改變
+                location_select.onchange = function () {
+                    location_select.value;
+                    console.log(location_select.value);
+                }
+                
             });
     </script>
 
